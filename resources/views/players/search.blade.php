@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Buscar jugador</title>
-</head>
-<body>
+@extends('layouts.app')
 
-<h1>Buscar jugador</h1>
+@section('content')
+    <h1>Buscar jugador</h1>
 
-<form method="POST" action="/search-player">
-    @csrf
-    <input type="text" name="query" placeholder="Ej: messi">
-    <button type="submit">Buscar</button>
-</form>
-
-</body>
-</html>
+    <form method="POST" action="/search-player">
+        @csrf
+        <input type="text" name="query" placeholder="Ej: messi">
+        <button type="submit">Buscar</button>
+    </form>
+@endsection
